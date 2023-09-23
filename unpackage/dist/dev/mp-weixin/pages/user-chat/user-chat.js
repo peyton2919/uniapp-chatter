@@ -1,9 +1,9 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/user-chat/user-chat"],{
 
 /***/ 94:
-/*!*****************************************************************************************************!*\
-  !*** O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/main.js?{"page":"pages%2Fuser-chat%2Fuser-chat"} ***!
-  \*****************************************************************************************************/
+/*!*******************************************************************************************!*\
+  !*** E:/workspace/uniapp/uniapp-chatter/main.js?{"page":"pages%2Fuser-chat%2Fuser-chat"} ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22,9 +22,9 @@ createPage(_userChat.default);
 /***/ }),
 
 /***/ 95:
-/*!**********************************************************************************!*\
-  !*** O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/pages/user-chat/user-chat.vue ***!
-  \**********************************************************************************/
+/*!************************************************************************!*\
+  !*** E:/workspace/uniapp/uniapp-chatter/pages/user-chat/user-chat.vue ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -61,9 +61,9 @@ component.options.__file = "pages/user-chat/user-chat.vue"
 /***/ }),
 
 /***/ 96:
-/*!*****************************************************************************************************************!*\
-  !*** O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/pages/user-chat/user-chat.vue?vue&type=template&id=07e822fc& ***!
-  \*****************************************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** E:/workspace/uniapp/uniapp-chatter/pages/user-chat/user-chat.vue?vue&type=template&id=07e822fc& ***!
+  \*******************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -83,9 +83,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 97:
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/pages/user-chat/user-chat.vue?vue&type=template&id=07e822fc& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/workspace/uniapp/uniapp-chatter/pages/user-chat/user-chat.vue?vue&type=template&id=07e822fc& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -110,9 +110,9 @@ render._withStripped = true
 /***/ }),
 
 /***/ 98:
-/*!***********************************************************************************************************!*\
-  !*** O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/pages/user-chat/user-chat.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** E:/workspace/uniapp/uniapp-chatter/pages/user-chat/user-chat.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -126,9 +126,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 99:
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--13-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/pages/user-chat/user-chat.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--13-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/workspace/uniapp/uniapp-chatter/pages/user-chat/user-chat.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -139,38 +139,143 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+var userChatList = function userChatList() {
+  Promise.all(/*! require.ensure | components/user-chat/user-chat-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/user-chat/user-chat-list")]).then((function () {
+    return resolve(__webpack_require__(/*! @/components/user-chat/user-chat-list.vue */ 173));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
 var _default = {
+  components: {
+    userChatList: userChatList
+  },
   data: function data() {
     return {
-      scrollH: 500
+      content: '',
+      scrollInto: '',
+      list: [{
+        user_id: 2,
+        avatar: "/static/default.jpg",
+        username: "Tom",
+        data: "你好",
+        type: "text",
+        create_time: 1695438918
+      }, {
+        user_id: 1,
+        avatar: "/static/default.jpg",
+        username: "Tom",
+        data: "速度实在太慢，没关系",
+        type: "text",
+        create_time: 1695438918
+      }, {
+        user_id: 2,
+        avatar: "/static/default.jpg",
+        username: "Tom",
+        data: "由于github在国内速度慢，我们得有个提速的工具",
+        type: "text",
+        create_time: 1695438918
+      }, {
+        user_id: 1,
+        avatar: "/static/default.jpg",
+        username: "Tom",
+        data: "记住安装的路径，待会儿会用到",
+        type: "text",
+        create_time: 1695438918
+      }, {
+        user_id: 2,
+        avatar: "/static/default.jpg",
+        username: "Tom",
+        data: "由于github在国内速度慢，我们得有个提速的工具",
+        type: "text",
+        create_time: 1695438918
+      }, {
+        user_id: 1,
+        avatar: "/static/default.jpg",
+        username: "Tom",
+        data: "再选择存放位置",
+        type: "text",
+        create_time: 1695438918
+      }, {
+        user_id: 2,
+        avatar: "/static/default.jpg",
+        username: "Tom",
+        data: "由于github在国内速度慢，我们得有个提速的工具",
+        type: "text",
+        create_time: 1695438918
+      }, {
+        user_id: 1,
+        avatar: "/static/default.jpg",
+        username: "Tom",
+        data: "再选择存放位置",
+        type: "text",
+        create_time: 1695451166
+      }, {
+        user_id: 2,
+        avatar: "/static/default.jpg",
+        username: "Tom",
+        data: "由于github在国内速度慢，我们得有个提速的工具",
+        type: "text",
+        create_time: 1695438918
+      }, {
+        user_id: 1,
+        avatar: "/static/default.jpg",
+        username: "Tom",
+        data: "再选择存放位置",
+        type: "text",
+        create_time: 1695451166
+      }, {
+        user_id: 2,
+        avatar: "/static/default.jpg",
+        username: "Tom",
+        data: "由于github在国内速度慢，我们得有个提速的工具",
+        type: "text",
+        create_time: 1695438918
+      }, {
+        user_id: 1,
+        avatar: "/static/default.jpg",
+        username: "Tom",
+        data: "再选择存放位置",
+        type: "text",
+        create_time: 1695451166
+      }]
     };
   },
-  onLoad: function onLoad() {
-    var _this = this;
-    uni.getSystemInfo({
-      success: function success(res) {
-        _this.scrollH = res.windowHeight - uni.upx2px(101);
-      }
-    });
+  // 页面加载完成的时候
+  onReady: function onReady() {
+    this.pageToBottom();
   },
-  methods: {}
+  methods: {
+    // 发送
+    submit: function submit() {
+      var obj = {
+        user_id: 1,
+        avatar: "/static/default.jpg",
+        username: "Tom",
+        data: this.content,
+        type: "text",
+        create_time: new Date().getTime()
+      };
+      if (this.content === '') {
+        return uni.showToast({
+          title: '消息不能为空!',
+          icon: 'none'
+        });
+      }
+      this.list.push(obj);
+      // 清空输入框
+      this.content = '';
+      // 滚动到底部
+      this.pageToBottom();
+    },
+    // 滚动到底部
+    pageToBottom: function pageToBottom() {
+      var _this = this;
+      setTimeout(function () {
+        var lastIndex = _this.list.length - 1;
+        if (lastIndex < 0) return;
+        _this.scrollInto = 'chat' + lastIndex;
+      }, 300);
+    }
+  }
 };
 exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))

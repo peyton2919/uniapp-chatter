@@ -43,54 +43,17 @@
 </template>
 
 <script>
-	
 	const demo = [
-		{
-			username:"昵称1",
-			userpic:"/static/default.jpg",
-			createtime:"2023-09-20 下午15:30",
-			isfollow:false,
-			title:"我是标题",
-			titlepic:"/static/demo/datapic/11.jpg",
-			support:{
-				type:"support",
-				supportcount:1,
-				unsupportcount:3
-			},
-			commentcount:2,
-			sharenum:5
-		},
-		{
-			username:"昵称2",
-			userpic:"/static/default.jpg",
-			createtime:"2023-09-20 下午15:30",
-			isfollow:false,
-			title:"我是标题",
-			titlepic:"/static/demo/datapic/11.jpg",
-			support:{
-				type:"unsupport",
-				supportcount:41,
-				unsupportcount:3
-			},
-			commentcount:12,
-			sharenum:9
-		},
-		{
-			username:"昵称3",
-			userpic:"/static/default.jpg",
-			createtime:"2023-09-21 下午15:35",
-			isfollow:false,
-			title:"我是标题",
-			titlepic:"/static/demo/datapic/11.jpg",
-			support:{
-				type:"",
-				supportcount:0,
-				unsupportcount:0
-			},
-			commentcount:0,
-			sharenum:0
-		}
-	]
+		{username:"昵称1",userpic:"/static/default.jpg",createtime:"2023-09-20 下午15:30",
+			isfollow:true,title:"我是标题",titlepic:"/static/demo/datapic/11.jpg",
+			support:{type:"support",supportcount:1,unsupportcount:3},commentcount:2,sharenum:5},
+		{username:"昵称2",userpic:"/static/default.jpg",createtime:"2023-09-20 下午15:30",
+			isfollow:true,title:"我是标题",titlepic:"/static/demo/datapic/11.jpg",
+			support:{type:"unsupport",supportcount:41,unsupportcount:3},commentcount:12,sharenum:9},
+		{username:"昵称3",userpic:"/static/default.jpg",createtime:"2023-09-21 下午15:35",
+			isfollow:true,title:"我是标题",titlepic:"/static/demo/datapic/11.jpg",
+			support:{type:"",supportcount:0,unsupportcount:0},commentcount:0,sharenum:0}];
+	
 	import topicInfo from "@/components/topic-detail/topic-info.vue"
 	import commonList from "@/components/common/common-list.vue"
 	import loadMore from "@/components/common/load-more.vue"
@@ -166,7 +129,8 @@
 							,...this['list'+(index+1)]]
 					this['loadtext'+(index+1)] = '上拉加载更多'
 				},1500)
-			}
+			},
+			
 		}
 	}
 </script>

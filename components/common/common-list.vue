@@ -29,10 +29,13 @@
 			{{item.title}}
 		</view>
 		
-		<!-- 图片 -->
-		<image v-if="item.titlepic" :src="item.titlepic"  
-			class="rounded w-100" style="height: 350rpx;"
-			@click="openDetail"></image>
+		<!-- 帖子详情 -->
+		<slot>
+			<!-- 图片 -->
+			<image v-if="item.titlepic" :src="item.titlepic"  
+				class="rounded w-100" style="height: 350rpx;"
+				@click="openDetail"></image>
+		</slot>
 		
 		<!-- 图标按钮 -->
 		<view class="flex align-center">
@@ -57,7 +60,7 @@
 			<!-- 评论 -->
 			<view class="flex align-center justify-center flex-1 animated faster"
 					hover-class="jello text-main"
-					@click="openDetail">
+					@click="doComment">
 				<text class="iconfont icon-pinglun2 mr-2"></text>
 				<text>{{item.commentcount>0?item.commentcount:'评论'}}</text>
 			</view>
@@ -65,7 +68,7 @@
 			<!-- 分享 -->
 			<view class="flex align-center justify-center flex-1 animated faster"
 					hover-class="jello text-main"
-					@click="openDetail">
+					@click="doShare">
 				<text class="iconfont icon-fenxiang mr-2"></text>
 				<text>{{item.sharenum>0?item.sharenum:'分享'}}</text>
 			</view>
@@ -81,8 +84,15 @@
 				required:true
 			},
 			index:{
-				type:Number
+				type:Number,
+				default:-1
+			},
+			// 用来判断 (详情 | 列表) 默认为: 列表
+			single:{
+				type:Boolean,
+				default:false
 			}
+			
 		},
 		data(){
 			return{
@@ -101,7 +111,14 @@
 			},
 			// 进入详情页
 			openDetail(){
-				console.log('进入详情页');
+				// 处于详情页 -> 返回;
+				if (this.single) {return;}
+				uni.navigateTo({
+					url: '/pages/detail/detail?detail='+JSON.stringify(this.item),
+					success: res => {},
+					fail: () => {},
+					complete: () => {}
+				});
 			},
 			// 顶 踩操作
 			doSupport(type){
@@ -110,7 +127,23 @@
 					type:type,
 					index:this.index
 					});
-			}
+			},
+			// 评论
+			doComment(){
+				// 处于列表页面
+				if(!this.single){
+					return this.openDetail()
+				}
+				this.$emit('doComment')
+			},
+			// 分享
+			doShare(){
+				// 处于列表页面
+				if(!this.single){
+					return this.openDetail()
+				}
+				this.$emit('doShare')
+			},
 		}
 	}
 </script>

@@ -213,6 +213,23 @@
             }
             
         }
+        ,{
+            "path" : "pages/detail/detail",
+            "style" :                                                                                    
+            {
+                "app-plus": {
+                	"titleNView": {
+                		"buttons": [
+                			{
+								"type": "menu",
+								"float": "right"
+							}
+                		]
+                	}
+                }
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

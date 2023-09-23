@@ -1,9 +1,9 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/user-list/user-list"],{
 
 /***/ 88:
-/*!*****************************************************************************************************!*\
-  !*** O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/main.js?{"page":"pages%2Fuser-list%2Fuser-list"} ***!
-  \*****************************************************************************************************/
+/*!*******************************************************************************************!*\
+  !*** E:/workspace/uniapp/uniapp-chatter/main.js?{"page":"pages%2Fuser-list%2Fuser-list"} ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22,9 +22,9 @@ createPage(_userList.default);
 /***/ }),
 
 /***/ 89:
-/*!**********************************************************************************!*\
-  !*** O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/pages/user-list/user-list.vue ***!
-  \**********************************************************************************/
+/*!************************************************************************!*\
+  !*** E:/workspace/uniapp/uniapp-chatter/pages/user-list/user-list.vue ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -61,9 +61,9 @@ component.options.__file = "pages/user-list/user-list.vue"
 /***/ }),
 
 /***/ 90:
-/*!*****************************************************************************************************************!*\
-  !*** O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/pages/user-list/user-list.vue?vue&type=template&id=187c9808& ***!
-  \*****************************************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** E:/workspace/uniapp/uniapp-chatter/pages/user-list/user-list.vue?vue&type=template&id=187c9808& ***!
+  \*******************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -83,9 +83,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 91:
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/pages/user-list/user-list.vue?vue&type=template&id=187c9808& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/workspace/uniapp/uniapp-chatter/pages/user-list/user-list.vue?vue&type=template&id=187c9808& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -95,19 +95,65 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var render = function () {}
-var staticRenderFns = []
-var recyclableRender
 var components
+try {
+  components = {
+    userList: function () {
+      return __webpack_require__.e(/*! import() | components/user-list/user-list */ "components/user-list/user-list").then(__webpack_require__.bind(null, /*! @/components/user-list/user-list.vue */ 168))
+    },
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  var l0 = _vm.__map(_vm.newsList, function (item, index) {
+    var $orig = _vm.__get_orig(item)
+    var g0 = item.list.length
+    var g1 = g0 > 0 ? item.list.length : null
+    return {
+      $orig: $orig,
+      g0: g0,
+      g1: g1,
+    }
+  })
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        l0: l0,
+      },
+    }
+  )
+}
+var recyclableRender = false
+var staticRenderFns = []
+render._withStripped = true
 
 
 
 /***/ }),
 
 /***/ 92:
-/*!***********************************************************************************************************!*\
-  !*** O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/pages/user-list/user-list.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** E:/workspace/uniapp/uniapp-chatter/pages/user-list/user-list.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -121,9 +167,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 93:
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--13-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/pages/user-list/user-list.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--13-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/workspace/uniapp/uniapp-chatter/pages/user-list/user-list.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

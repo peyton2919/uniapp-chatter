@@ -31,6 +31,7 @@
 				</scroll-view>
 			</swiper-item>
 			
+			
 			<!-- 话题 -->
 			<swiper-item>
 				
@@ -41,7 +42,8 @@
 					
 					<!-- 搜索框 -->
 					<view class="p-2">
-						<view class="flex align-center justify-center bg-light rounded py-2 text-secondary">
+						<view class="flex align-center justify-center bg-light rounded py-2 text-secondary"
+								@click="openSearch">
 							<text class="iconfont icon-sousuo mr-2"></text>
 							搜索话题
 						</view>
@@ -73,51 +75,15 @@
 
 <script>
 	const demo = [
-		{
-			username:"昵称1",
-			userpic:"/static/default.jpg",
-			createtime:"2023-09-20 下午15:30",
-			isfollow:true,
-			title:"我是标题",
-			titlepic:"/static/demo/datapic/11.jpg",
-			support:{
-				type:"support",
-				supportcount:1,
-				unsupportcount:3
-			},
-			commentcount:2,
-			sharenum:5
-		},
-		{
-			username:"昵称2",
-			userpic:"/static/default.jpg",
-			createtime:"2023-09-20 下午15:30",
-			isfollow:true,
-			title:"我是标题",
-			titlepic:"/static/demo/datapic/11.jpg",
-			support:{
-				type:"unsupport",
-				supportcount:41,
-				unsupportcount:3
-			},
-			commentcount:12,
-			sharenum:9
-		},
-		{
-			username:"昵称3",
-			userpic:"/static/default.jpg",
-			createtime:"2023-09-21 下午15:35",
-			isfollow:true,
-			title:"我是标题",
-			titlepic:"/static/demo/datapic/11.jpg",
-			support:{
-				type:"",
-				supportcount:0,
-				unsupportcount:0
-			},
-			commentcount:0,
-			sharenum:0
-		}
+		{username:"昵称1",userpic:"/static/default.jpg",createtime:"2023-09-20 下午15:30",
+			isfollow:true,title:"我是标题",titlepic:"/static/demo/datapic/11.jpg",
+			support:{type:"support",supportcount:1,unsupportcount:3},commentcount:2,sharenum:5},
+		{username:"昵称2",userpic:"/static/default.jpg",createtime:"2023-09-20 下午15:30",
+			isfollow:true,title:"我是标题",titlepic:"/static/demo/datapic/11.jpg",
+			support:{type:"unsupport",supportcount:41,unsupportcount:3},commentcount:12,sharenum:9},
+		{username:"昵称3",userpic:"/static/default.jpg",createtime:"2023-09-21 下午15:35",
+			isfollow:true,title:"我是标题",titlepic:"/static/demo/datapic/11.jpg",
+			support:{type:"",supportcount:0,unsupportcount:0},commentcount:0,sharenum:0}
 	]
 	
 	import uniNavBar from "@/components/uni-ui/uni-nav-bar/uni-nav-bar.vue"
@@ -143,37 +109,12 @@
 				loadmore:'上拉加载更多',
 				hotCate:[{name:'关注'},{name:'推荐'},{name:'体育'},
 							{name:'热点'},{name:'财经'},{name:'娱乐'},],
-				topicList:[{
-					cover:'/static/demo/topicpic/1.jpeg',
-					title:'话题名称1',
-					desc:'话题描述1',
-					today_count:'0',
-					dynamic_count:'10'
-				},{
-					cover:'/static/demo/topicpic/1.jpeg',
-					title:'话题名称2',
-					desc:'话题描述2',
-					today_count:'2',
-					dynamic_count:'20'
-				},{
-					cover:'/static/demo/topicpic/1.jpeg',
-					title:'话题名称3',
-					desc:'话题描述3',
-					today_count:'3',
-					dynamic_count:'30'
-				},{
-					cover:'/static/demo/topicpic/1.jpeg',
-					title:'话题名称4',
-					desc:'话题描述4',
-					today_count:'4',
-					dynamic_count:'40'
-				},{
-					cover:'/static/demo/topicpic/1.jpeg',
-					title:'话题名称5',
-					desc:'话题描述5',
-					today_count:'5',
-					dynamic_count:'50'
-				}]
+				topicList:[
+					{cover:'/static/demo/topicpic/1.jpeg',title:'话题名称1',desc:'话题描述1',today_count:'0',dynamic_count:'10'},
+					{cover:'/static/demo/topicpic/1.jpeg',title:'话题名称2',desc:'话题描述2',today_count:'2',dynamic_count:'20'},
+					{cover:'/static/demo/topicpic/1.jpeg',title:'话题名称3',desc:'话题描述3',today_count:'3',dynamic_count:'30'},
+					{cover:'/static/demo/topicpic/1.jpeg',title:'话题名称4',desc:'话题描述4',today_count:'4',dynamic_count:'40'},
+					{cover:'/static/demo/topicpic/1.jpeg',title:'话题名称5',desc:'话题描述5',today_count:'5',dynamic_count:'50'}]
 			}
 		},
 		onLoad() {
@@ -237,6 +178,15 @@
 					// 设置加载状态
 					this.loadmore = '上拉加载更多'
 				},2000)
+			},
+			// 打开搜索页
+			openSearch(){
+				uni.navigateTo({
+					url: '/pages/search/search?type=topic',
+					success: res => {},
+					fail: () => {},
+					complete: () => {}
+				});
 			}
 		}
 	}

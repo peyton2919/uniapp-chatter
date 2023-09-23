@@ -19,7 +19,7 @@
 
 <script>
 	import uniBadge from "@/components/uni-ui/uni-badge/uni-badge.vue"
-	import $T from "@/common/time.js"
+	import $T from "@/common/js/time.js"
 	
 	export default {
 		components:{

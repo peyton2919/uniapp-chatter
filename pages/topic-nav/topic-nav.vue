@@ -25,9 +25,9 @@
 					<!-- 判断列表有数据 -->
 					<template v-if="item.list.length>0">
 						<!--  列表 -->
-						<block v-for="(item2,index) in item.list" :key="index">
+						<block v-for="(item2,index2) in item.list" :key="index2">
 						
-							<topic-list :item="item2" :index="index"></topic-list>
+							<topic-list :item="item2" :index="index2"></topic-list>
 									
 							<divider></divider>
 						</block>
@@ -41,8 +41,7 @@
 						<no-thing str="什么都没有"></no-thing>
 					</template>
 				</scroll-view>
-			</swiper-item>
-			
+			</swiper-item>	
 		</swiper>
 		
 	</view>
@@ -50,38 +49,12 @@
 
 <script>
 	const demo = [
-		{
-			cover:'/static/demo/topicpic/1.jpeg',
-			title:'话题名称1',
-			desc:'话题描述1',
-			today_count:'0',
-			dynamic_count:'10'
-		},{
-			cover:'/static/demo/topicpic/1.jpeg',
-			title:'话题名称2',
-			desc:'话题描述2',
-			today_count:'2',
-			dynamic_count:'20'
-		},{
-			cover:'/static/demo/topicpic/1.jpeg',
-			title:'话题名称3',
-			desc:'话题描述3',
-			today_count:'3',
-			dynamic_count:'30'
-		},{
-			cover:'/static/demo/topicpic/1.jpeg',
-			title:'话题名称4',
-			desc:'话题描述4',
-			today_count:'4',
-			dynamic_count:'40'
-		},{
-			cover:'/static/demo/topicpic/1.jpeg',
-			title:'话题名称5',
-			desc:'话题描述5',
-			today_count:'5',
-			dynamic_count:'50'
-		}
-	]
+		{cover:'/static/demo/topicpic/1.jpeg',title:'话题名称1',desc:'话题描述1',today_count:0,dynamic_count:10},
+		{cover:'/static/demo/topicpic/1.jpeg',title:'话题名称2',desc:'话题描述2',today_count:2,dynamic_count:20},
+		{cover:'/static/demo/topicpic/1.jpeg',title:'话题名称3',desc:'话题描述3',today_count:3,dynamic_count:30},
+		{cover:'/static/demo/topicpic/1.jpeg',title:'话题名称4',desc:'话题描述4',today_count:4,dynamic_count:40},
+		{cover:'/static/demo/topicpic/1.jpeg',title:'话题名称5',desc:'话题描述5',today_count:5,dynamic_count:50}
+	];
 	
 	import topicList from '@/components/dynamic/topic-list.vue';
 	import loadMore from "@/components/common/load-more.vue"
@@ -98,17 +71,8 @@
 				// 顶部选项卡索引
 				tabIndex:0,
 				// 顶部选项卡
-				tabBars:[
-					{name:'关注'},
-					{name:'推荐'},
-					{name:'体育'},
-					{name:'热点'},
-					{name:'财经'},
-					{name:'娱乐'},
-					{name:'军事'},
-					{name:'历史'},
-					{name:'本地'}
-				],
+				tabBars:[{name:'关注'},{name:'推荐'},{name:'体育'},{name:'热点'},
+					{name:'财经'},{name:'娱乐'},{name:'军事'},{name:'历史'},{name:'本地'}],
 				newsList:[]
 			}
 		},
@@ -166,36 +130,6 @@
 				this.tabIndex = index
 				// 滚动到指定元素
 				this.scrollIntoView='tab'+index
-			},
-			// 关注
-			follow(e){
-				this.list[e].isfollow=true;
-				uni.showToast({
-					title:'关注成功!'
-				})
-			},
-			//顶踩操作
-			doSupport(e){
-				// 用户
-				let item = this.list[e.index]
-				let msg = e.type === 'support'? '顶':'踩'
-				// 判断之前是否已经顶踩
-				// 之前没有操作过
-				if(item.support.type === ''){
-					item.support[e.type+'count']++
-				}else if(item.support.type === 'support' && e.type === 'unsupport'){// 之前顶了
-					// 顶 -1 ； 踩 +1
-					item.support.supportcount--;
-					item.support.unsupportcount++;
-				}else if(item.support.type === 'unsupport' && e.type === 'support'){// 之前踩了
-					// 顶 +1 ； 踩 -1
-					item.support.supportcount++;
-					item.support.unsupportcount--;
-				}
-				item.support.type = e.type	
-				uni.showToast({
-					title: msg + ' -> 成功'
-				});
 			},
 			//上拉加载更多
 			loadmore(index){

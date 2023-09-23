@@ -25,8 +25,8 @@
 					<!-- 判断列表有数据 -->
 					<template v-if="item.list.length>0">
 						<!--  列表 -->
-						<block v-for="(item2,index) in item.list" :key="index">
-							<common-list :item="item2" :index="index"
+						<block v-for="(item2,index2) in item.list" :key="index2">
+							<common-list :item="item2" :index="index2"
 									@doFollow="doFollow" @doSupport="doSupport"></common-list>
 							<divider></divider>
 						</block>
@@ -49,51 +49,15 @@
 
 <script>
 	const demo = [
-		{
-			username:"昵称1",
-			userpic:"/static/default.jpg",
-			createtime:"2023-09-20 下午15:30",
-			isfollow:false,
-			title:"我是标题",
-			titlepic:"/static/demo/datapic/11.jpg",
-			support:{
-				type:"support",
-				supportcount:1,
-				unsupportcount:3
-			},
-			commentcount:2,
-			sharenum:5
-		},
-		{
-			username:"昵称2",
-			userpic:"/static/default.jpg",
-			createtime:"2023-09-20 下午15:30",
-			isfollow:false,
-			title:"我是标题",
-			titlepic:"/static/demo/datapic/11.jpg",
-			support:{
-				type:"unsupport",
-				supportcount:41,
-				unsupportcount:3
-			},
-			commentcount:12,
-			sharenum:9
-		},
-		{
-			username:"昵称3",
-			userpic:"/static/default.jpg",
-			createtime:"2023-09-21 下午15:35",
-			isfollow:false,
-			title:"我是标题",
-			titlepic:"/static/demo/datapic/11.jpg",
-			support:{
-				type:"",
-				supportcount:0,
-				unsupportcount:0
-			},
-			commentcount:0,
-			sharenum:0
-		}
+		{username:"昵称1",userpic:"/static/default.jpg",createtime:"2023-09-20 下午15:30",
+			isfollow:true,title:"我是标题",titlepic:"/static/demo/datapic/11.jpg",
+			support:{type:"support",supportcount:1,unsupportcount:3},commentcount:2,sharenum:5},
+		{username:"昵称2",userpic:"/static/default.jpg",createtime:"2023-09-20 下午15:30",
+			isfollow:true,title:"我是标题",titlepic:"/static/demo/datapic/11.jpg",
+			support:{type:"unsupport",supportcount:41,unsupportcount:3},commentcount:12,sharenum:9},
+		{username:"昵称3",userpic:"/static/default.jpg",createtime:"2023-09-21 下午15:35",
+			isfollow:true,title:"我是标题",titlepic:"/static/demo/datapic/11.jpg",
+			support:{type:"",supportcount:0,unsupportcount:0},commentcount:0,sharenum:0}
 	]
 	
 	import commonList from '@/components/common/common-list.vue'
@@ -112,17 +76,8 @@
 				// 顶部选项卡索引
 				tabIndex:0,
 				// 顶部选项卡
-				tabBars:[
-					{name:'关注'},
-					{name:'推荐'},
-					{name:'体育'},
-					{name:'热点'},
-					{name:'财经'},
-					{name:'娱乐'},
-					{name:'军事'},
-					{name:'历史'},
-					{name:'本地'}
-				],
+				tabBars:[{name:'关注'},{name:'推荐'},{name:'体育'},{name:'热点'},
+					{name:'财经'},{name:'娱乐'},{name:'军事'},{name:'历史'},{name:'本地'}],
 				newsList:[]
 			}
 		},
@@ -142,7 +97,7 @@
 		// 监听点击导航搜索框
 		onNavigationBarSearchInputClicked() {
 			uni.navigateTo({
-				url:'../search/search',
+				url:'../search/search?type=post',
 			})
 		},
 		// 监听导航按钮点击事件
@@ -191,7 +146,7 @@
 			//顶踩操作
 			doSupport(e){
 				// 用户
-				let item = this.list[e.index]
+				let item = this.newsList[this.tabIndex].list[e.index]
 				let msg = e.type === 'support'? '顶':'踩'
 				// 判断之前是否已经顶踩
 				// 之前没有操作过
@@ -210,6 +165,7 @@
 				uni.showToast({
 					title: msg + ' -> 成功'
 				});
+				
 			},
 			//上拉加载更多
 			loadmore(index){

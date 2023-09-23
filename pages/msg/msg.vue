@@ -31,37 +31,12 @@
 </template>
 
 <script>
-	const demo = [{
-			avatar:'/static/default.jpg',
-			username:'Judy',
-			update_time:1695263814,
-			data:'同步手机端程序文件',
-			noread:12
-		},{
-			avatar:'/static/default.jpg',
-			username:'张三',
-			update_time:1695263814,
-			data:'子组件无法更改',
-			noread:2
-		},{
-			avatar:'/static/default.jpg',
-			username:'李四',
-			update_time:1695296214,
-			data:'浏览器控制台中抛出警告',
-			noread:5
-		},{
-			avatar:'/static/default.jpg',
-			username:'王五',
-			update_time:1695209760,
-			data:'不满足类型要求',
-			noread:23
-		},{
-			avatar:'/static/default.jpg',
-			username:'张无忌',
-			update_time:1692520560,
-			data:'允许了子组件以某种不明显的方式影响父组件的状态',
-			noread:8
-		}];
+	const demo = [
+		{avatar:'/static/default.jpg',username:'Judy',update_time:1695263814,data:'同步手机端程序文件',noread:12},
+		{avatar:'/static/default.jpg',username:'张三',update_time:1695263814,data:'子组件无法更改',noread:2},
+		{avatar:'/static/default.jpg',username:'李四',update_time:1695296214,data:'浏览器控制台中抛出警告',noread:5},
+		{avatar:'/static/default.jpg',username:'王五',update_time:1695209760,data:'不满足类型要求',noread:23},
+		{avatar:'/static/default.jpg',username:'张无忌',update_time:1692520560,data:'允许了子组件以某种不明显的方式影响父组件的状态',noread:8}];
 	
 	import msgList from "@/components/msg/msg-list.vue"
 	import uniPopup from "@/components/uni-ui/uni-popup/uni-popup.vue"
@@ -111,7 +86,9 @@
 			popupEvent(e){
 				switch(e){
 					case 'friend':
-						console.log('添加好友')
+						uni.navigateTo({
+							url:'/pages/search/search?type=user'
+						})
 						break;
 					case 'clear':
 						console.log('清除列表')

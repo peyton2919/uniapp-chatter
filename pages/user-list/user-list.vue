@@ -1,4 +1,5 @@
 <template>
+	<!-- 用户列表详情 -->
 	<view>
 		<!-- tab -->
 		<view class="flex align-center h-100">
@@ -23,10 +24,10 @@
 					<!-- 判断列表有数据 -->
 					<template v-if="item.list.length>0">
 						<!--  列表 -->
-						<block v-for="(item2,index) in item.list" :key="index">
+						<block v-for="(item2,index2) in item.list" :key="index2">
 							
 							<!-- 列表样式 -->
-							<user-list :item="item2" :index="index"></user-list>
+							<user-list :item="item2" :index="index2"></user-list>
 							
 						</block>
 						
@@ -52,7 +53,8 @@
 		{avatar:"/static/default.jpg",username:"李四",sex:2,age:32,isFollow:true},
 		{avatar:"/static/default.jpg",username:"王五",sex:2,age:21,isFollow:false},
 		{avatar:"/static/default.jpg",username:"张敏",sex:1,age:15,isFollow:true}
-	]
+	];
+	
 	import loadMore from "@/components/common/load-more.vue"
 	import userList from "@/components/user-list/user-list.vue"
 	
@@ -83,7 +85,7 @@
 		// 监听点击输入框事件
 		onNavigationBarSearchInputClicked() {
 			uni.navigateTo({
-				url: '/pages/search/search',
+				url: '/pages/search/search?type=user',
 				success: res => {},
 				fail: () => {},
 				complete: () => {}

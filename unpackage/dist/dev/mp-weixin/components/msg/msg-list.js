@@ -1,9 +1,9 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["components/msg/msg-list"],{
 
 /***/ 139:
-/*!********************************************************************************!*\
-  !*** O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/components/msg/msg-list.vue ***!
-  \********************************************************************************/
+/*!**********************************************************************!*\
+  !*** E:/workspace/uniapp/uniapp-chatter/components/msg/msg-list.vue ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -40,9 +40,9 @@ component.options.__file = "components/msg/msg-list.vue"
 /***/ }),
 
 /***/ 140:
-/*!***************************************************************************************************************!*\
-  !*** O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/components/msg/msg-list.vue?vue&type=template&id=4220dcf3& ***!
-  \***************************************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** E:/workspace/uniapp/uniapp-chatter/components/msg/msg-list.vue?vue&type=template&id=4220dcf3& ***!
+  \*****************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -62,9 +62,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 141:
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/components/msg/msg-list.vue?vue&type=template&id=4220dcf3& ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/workspace/uniapp/uniapp-chatter/components/msg/msg-list.vue?vue&type=template&id=4220dcf3& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -98,9 +98,9 @@ render._withStripped = true
 /***/ }),
 
 /***/ 142:
-/*!*********************************************************************************************************!*\
-  !*** O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/components/msg/msg-list.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************/
+/*!***********************************************************************************************!*\
+  !*** E:/workspace/uniapp/uniapp-chatter/components/msg/msg-list.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -114,9 +114,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 143:
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--13-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!O:/BaiduSyncdisk/workspace/uniapp/uniapp社区交友/components/msg/msg-list.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--13-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/workspace/uniapp/uniapp-chatter/components/msg/msg-list.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -131,7 +131,7 @@ exports.default = void 0;
 var _time = _interopRequireDefault(__webpack_require__(/*! @/common/time.js */ 144));
 var uniBadge = function uniBadge() {
   __webpack_require__.e(/*! require.ensure | components/uni-ui/uni-badge/uni-badge */ "components/uni-ui/uni-badge/uni-badge").then((function () {
-    return resolve(__webpack_require__(/*! @/components/uni-ui/uni-badge/uni-badge.vue */ 188));
+    return resolve(__webpack_require__(/*! @/components/uni-ui/uni-badge/uni-badge.vue */ 193));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {
