@@ -1,0 +1,136 @@
+<template>
+	<!-- 详情页 (帖子) -->
+	<view>
+		<!-- 帖子详情页面详细信息 -->
+		<common-list :item="info" single @doFollow="doFollow" @doSupport="doSupport"
+				@doComment="doComment" @doShare="doShare">
+			<view class="">{{info.content}}</view>
+			<view class="">
+				<image v-for="(item,index) in info.images" :key="index"
+					:src="item.url" class="w-100" mode="widthFix"
+					@click="preview(index)"></image>
+			</view>
+		</common-list>
+		
+	</view>
+</template>
+
+<script>
+	import commonList from "@/components/common/common-list.vue"
+	
+	export default {
+		components:{
+			commonList
+		},
+		data() {
+			return {
+				// 当前 帖子 信息
+				info:{
+					username:"昵称",
+					userpic:"/static/default.jpg",
+					createtime:"2019-10-20 下午04:30",
+					isfollow:false,
+					title:"我是标题",
+					titlepic:"/static/demo/datapic/11.jpg",
+					support:{
+						type:"support", // 顶
+						supportcount:1,
+						unsupportcount:3
+					},
+					commentcount:2,
+					sharenum:5,
+					content:"帝莎编程学院：uni-app第二季仿商城类实战项目开发，uni-app第二季仿微信实战项目开发",
+					images:[{
+						url:"https://tangzhe123-com.oss-cn-shenzhen.aliyuncs.com/Appstatic/qsbk/demo/datapic/4.jpg"
+					},{
+						url:"https://tangzhe123-com.oss-cn-shenzhen.aliyuncs.com/Appstatic/qsbk/demo/datapic/5.jpg"
+					}]
+				}
+			}
+		},
+		onLoad(e) {
+			// 初始化
+			if (e.detail) {
+				this.__init(JSON.parse(e.detail))
+			}
+		},
+		computed:{
+			imagesList(){
+				return this.info.images.map(item=>item.url)
+			}
+		},
+		methods: {
+			__init(data){
+				// 修改标题
+				uni.setNavigationBarTitle({
+					title:data.title
+				})
+				// 请求数据
+				// this.info = data
+				
+			},
+			// 点击 评论
+			doComment(){
+				
+			},
+			// 点击 分享
+			doShare(){
+				
+			},
+			// 关注
+			doFollow(){
+				this.info.isfollow = true
+				uni.showToast({
+					title: '关注成功'
+				});
+			},
+			// 顶踩
+			doSupport(e){
+				// 之前操作过
+				if (this.info.support.type === e.type) {
+					return uni.showToast({
+						title: '你已经操作过了'
+					});
+				}
+				let msg = e.type === 'support'? '顶':'踩'
+				// 判断之前是否已经顶踩
+				// 之前没有操作过
+				if(this.info.support.type === ''){
+					this.info.support[e.type+'count']++
+				}else if(this.info.support.type === 'support' && e.type === 'unsupport'){// 之前顶了
+					// 顶 -1 ； 踩 +1
+					this.info.support.supportcount--;
+					this.info.support.unsupportcount++;
+				}else if(this.info.support.type === 'unsupport' && e.type === 'support'){// 之前踩了
+					// 顶 +1 ； 踩 -1
+					this.info.support.supportcount++;
+					this.info.support.unsupportcount--;
+				}
+				this.info.support.type = e.type	
+				uni.showToast({
+					title: msg + ' -> 成功'
+				});
+			},
+			// 预览图片
+			preview(e){
+				uni.previewImage({
+					current:e,
+					urls:this.imagesList,
+					longPressActions:{
+						itemList:['发送给朋友','保存图片','收藏'],
+						success: (res) => {
+							console.log('选中了第'+res);
+						},
+						fail: (err) => {
+							console.log(err.errMsg);
+						}
+					}
+				})
+			},
+		}
+	}
+</script>
+
+<style>
+
+</style>

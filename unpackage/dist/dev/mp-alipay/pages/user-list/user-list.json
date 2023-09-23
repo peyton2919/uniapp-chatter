@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "user-list": "/components/user-list/user-list",
+    "no-thing": "/components/common/no-thing",
+    "load-more": "/components/common/load-more"
+  }
+}

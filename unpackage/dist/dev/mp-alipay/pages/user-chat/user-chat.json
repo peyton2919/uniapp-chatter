@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "user-chat-list": "/components/user-chat/user-chat-list"
+  }
+}

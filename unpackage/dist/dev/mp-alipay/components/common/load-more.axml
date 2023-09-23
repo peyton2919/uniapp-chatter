@@ -1,0 +1,1 @@
+<view class="flex align-center justify-center py-2"><text class="font text-light-muted">{{str}}</text></view>

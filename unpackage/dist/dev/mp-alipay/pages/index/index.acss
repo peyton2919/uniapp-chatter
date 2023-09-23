@@ -1,0 +1,6 @@
+
+.scroll-view_H {
+		white-space: nowrap;
+		width: 100%;
+}
+

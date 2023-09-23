@@ -1,0 +1,1 @@
+<view class="flex align-center"><slot></slot><block a:if="{{text}}"><text data-event-opts="{{[['tap',[['onClick']]]]}}" class="{{(('uni-badge')+' '+classNames)}}" style="{{$root.s0}}" onTap="__e">{{displayValue}}</text></block></view>

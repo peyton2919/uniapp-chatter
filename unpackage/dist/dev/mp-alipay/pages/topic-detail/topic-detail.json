@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "divider": "/components/common/divider",
+    "no-thing": "/components/common/no-thing",
+    "topic-info": "/components/topic-detail/topic-info",
+    "common-list": "/components/common/common-list",
+    "load-more": "/components/common/load-more"
+  }
+}

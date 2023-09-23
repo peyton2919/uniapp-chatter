@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "话题分类",
+  "usingComponents": {
+    "divider": "/components/common/divider",
+    "no-thing": "/components/common/no-thing",
+    "topic-list": "/components/dynamic/topic-list",
+    "load-more": "/components/common/load-more"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "divider": "/components/common/divider",
+    "uni-nav-bar": "/components/uni-ui/uni-nav-bar/uni-nav-bar",
+    "common-list": "/components/common/common-list",
+    "load-more": "/components/common/load-more",
+    "hot-cate": "/components/dynamic/hot-cate",
+    "topic-list": "/components/dynamic/topic-list"
+  }
+}
