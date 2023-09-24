@@ -12,15 +12,45 @@
 			</view>
 		</common-list>
 		
+		<!-- 分割线 -->
+		<divider></divider>
+		
+		<view class="p-2 font-md font-weight-bold">最新评论 3</view>
+		
+		<view class="px-2">
+			<view class="uni-comment-list">
+				<view class="uni-comment-face">
+					<image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png"
+							mode="widthFix"></image>
+				</view>
+				<view class="uni-comment-body">
+					<view class="uni-comment-top">
+						<text>小猫咪</text>
+					</view>
+					<view class="uni-comment-content">支持国产,支持DCloud</view>
+					<view class="uni-comment-date">
+						<view>2天前</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		
+		<!-- 空占位 -->
+		<view class="h-100"></view>
+		<speak-input @submit=""></speak-input>
+		
+		
 	</view>
 </template>
 
 <script>
 	import commonList from "@/components/common/common-list.vue"
+	import speakInput from "@/components/common/speak-input.vue"
+	
 	
 	export default {
 		components:{
-			commonList
+			commonList,speakInput
 		},
 		data() {
 			return {
@@ -127,6 +157,11 @@
 					}
 				})
 			},
+			// 提交后座
+			submit(data){
+				console.log(data);
+			}
+			
 		}
 	}
 </script>

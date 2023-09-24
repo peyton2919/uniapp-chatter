@@ -218,6 +218,7 @@
             "style" :                                                                                    
             {
                 "app-plus": {
+					"bounce": "none",
                 	"titleNView": {
                 		"buttons": [
                 			{

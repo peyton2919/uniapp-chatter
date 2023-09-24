@@ -16,29 +16,20 @@
 		</scroll-view>
 		
 		<!-- 底部操作条 -->
-		<view class="fixed-bottom h-100 flex align-center border-top bg-white">
-			<input type="text" class="flex-1 rounded bg-light ml-2"
-					style="padding: 5rpx;" placeholder="文明发言"
-					v-model="content" :adjust-position="false"
-					@confirm="submit"/>
-					
-			<view class="iconfont icon-fabu i-100 flex align-center justify-center font-lg animated"
-					hover-class="jello text-main"
-					@click="submit"></view>
-		</view>
+		<speak-input @submit="submit"></speak-input>
 	</view>
 </template>
 
 <script>
 	import userChatList from "@/components/user-chat/user-chat-list.vue"
+	import speakInput from "@/components/common/speak-input.vue"
 	
 	export default {
 		components:{
-			userChatList
+			userChatList,speakInput
 		},
 		data() {
 			return {
-				content:'',
 				scrollInto:'',
 				list:[
 					{user_id:2,avatar:"/static/default.jpg",username:"Tom",data:"你好",type:"text",create_time:1695438918},
@@ -61,24 +52,18 @@
 		},
 		methods: {
 			// 发送
-			submit(){
+			submit(data){
+
 				let obj ={
 					user_id:1,
 					avatar:"/static/default.jpg",
 					username:"Tom",
-					data:this.content,
+					data:data,
 					type:"text",
 					create_time:(new Date()).getTime()
 				}
-				if(this.content === ''){
-					return uni.showToast({
-						title: '消息不能为空!',
-						icon:'none'
-					});
-				}
 				this.list.push(obj)
-				// 清空输入框
-				this.content=''
+				
 				// 滚动到底部
 				this.pageToBottom()
 			},
