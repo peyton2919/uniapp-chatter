@@ -80,11 +80,15 @@
             "path" : "pages/mine/mine",
             "style" :                                                                                    
             {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "我的",
 				"app-plus": {
 					// 回弹效果
-					"bounce": "none"
+					"bounce": "none",
+					"titleNView": {
+						"buttons": [{
+							"type": "menu"
+						}]
+					}
 				}
             }
             

@@ -35,9 +35,13 @@
 			</view>
 		</view>
 		
+		
+		<more-share ref="share"></more-share>
+		
 		<!-- 空占位 -->
 		<view class="h-100"></view>
-		<speak-input @submit=""></speak-input>
+		<speak-input @submit="submit"></speak-input>
+		
 		
 		
 	</view>
@@ -46,11 +50,12 @@
 <script>
 	import commonList from "@/components/common/common-list.vue"
 	import speakInput from "@/components/common/speak-input.vue"
+	import moreShare from "@/components/common/more-share.vue"
 	
 	
 	export default {
 		components:{
-			commonList,speakInput
+			commonList,speakInput,moreShare
 		},
 		data() {
 			return {
@@ -76,6 +81,7 @@
 						url:"https://tangzhe123-com.oss-cn-shenzhen.aliyuncs.com/Appstatic/qsbk/demo/datapic/5.jpg"
 					}]
 				}
+				
 			}
 		},
 		onLoad(e) {
@@ -88,6 +94,14 @@
 			imagesList(){
 				return this.info.images.map(item=>item.url)
 			}
+		},
+		// 点击手机返回键事件
+		onBackPress() {
+			this.$refs.share.close()
+		},
+		onNavigationBarButtonTap() {
+			
+			this.$refs.share.open()
 		},
 		methods: {
 			__init(data){

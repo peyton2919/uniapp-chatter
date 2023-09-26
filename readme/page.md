@@ -26,6 +26,7 @@
 		common-list		公共列表 组件
 		divider	 		分割线 组件	
 		load-more		加载更多 组件
+		more-share		分享更多 组件
 		no-thing		没有数据 默认 组件
 		upload-image	多图上传 组件
 		
