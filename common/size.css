@@ -7,6 +7,20 @@
 	height: 100rpx;
 	width: 100rpx;
 }
+.i-150{
+	height: 150rpx;
+	width: 150rpx;
+}
+.i-300{
+	height: 300rpx;
+	width: 300rpx;
+}
 .h-100{
 	height: 100rpx;
+}
+.h-170{
+	height: 170rpx;
+}
+.w-180{
+	width: 180rpx;
 }

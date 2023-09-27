@@ -5,6 +5,9 @@
 .bg-main-disabled{
 	background-color: #F87F97!important;
 }
+.bg-main-disabled-gray{
+	background-color: gray!important;
+}
 .text-main{
 	color: #FF4A6A;
 }

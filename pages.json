@@ -121,7 +121,6 @@
 					}
 				}
             }
-            
         }
         ,{
             "path" : "pages/add-input/add-input",
@@ -130,8 +129,7 @@
                 "app-plus": {
                 	"titleNView":false
                 }
-            }
-            
+            }  
         }
         ,{
             "path" : "pages/topic-nav/topic-nav",
@@ -232,6 +230,89 @@
                 		]
                 	}
                 }
+            } 
+        }
+        ,{
+            "path" : "pages/user-set/user-set",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "设置",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"bounce": "none"
+				}
+            } 
+        }
+        ,{
+            "path" : "pages/user-password/user-password",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修改密码",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"bounce": "none"
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/user-email/user-email",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "绑定邮箱",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"bounce": "none"
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/user-info/user-info",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修改资料",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"bounce": "none"
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/user-feedback/user-feedback",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "关于社区",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"bounce": "none"
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/about/about",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"bounce": "none"
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"bounce": "none",
+					"titleNView": false
+				}
             }
             
         }
