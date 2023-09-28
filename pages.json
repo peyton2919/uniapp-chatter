@@ -316,6 +316,24 @@
             }
             
         }
+        ,{
+            "path" : "pages/user-space/user-space",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "个人空间",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"type": "menu"
+							}
+						]
+					}
+				}
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

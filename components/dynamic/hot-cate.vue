@@ -21,6 +21,10 @@
 </template>
 
 <script>
+	/**
+	 * @description 热门分类 组件
+	 * @property {Array} arr 热门分类集合
+	 */
 	export default {
 		props:{
 			arr:{

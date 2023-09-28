@@ -23,7 +23,12 @@
 	const uid = 1;
 	
 	import $T from "@/common/js/time.js"
-	
+	/**
+	 * @description 用户聊天列表 组件
+	 * @property {Object} item 要展示对象
+	 * @property {Number} index 索引
+	 * @property {Number| String} pretime 上条信息时间 [时间戳]
+	 */
 	export default {
 		props:{
 			item:{
@@ -35,7 +40,10 @@
 				default:0
 			},
 			// 上条信息时间
-			pretime:[Number,String]
+			pretime:{
+				type:[Number,String],
+				default:0
+			}
 		},
 		computed:{
 			// 是否是登录用户本人

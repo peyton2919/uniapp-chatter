@@ -38,6 +38,7 @@
 					<!-- 判断列表没有数据 -->
 					<template v-else>
 						<no-thing str="什么都没有"></no-thing>
+						
 					</template>
 				</scroll-view>
 			</swiper-item>
@@ -53,12 +54,12 @@
 			isfollow:true,title:"我是标题",titlepic:"/static/demo/datapic/11.jpg",
 			support:{type:"support",supportcount:1,unsupportcount:3},commentcount:2,sharenum:5},
 		{username:"昵称2",userpic:"/static/default.jpg",createtime:"2023-09-20 下午15:30",
-			isfollow:true,title:"我是标题",titlepic:"/static/demo/datapic/11.jpg",
+			isfollow:false,title:"我是标题",titlepic:"/static/demo/datapic/11.jpg",
 			support:{type:"unsupport",supportcount:41,unsupportcount:3},commentcount:12,sharenum:9},
 		{username:"昵称3",userpic:"/static/default.jpg",createtime:"2023-09-21 下午15:35",
-			isfollow:true,title:"我是标题",titlepic:"/static/demo/datapic/11.jpg",
+			isfollow:false,title:"我是标题",titlepic:"/static/demo/datapic/11.jpg",
 			support:{type:"",supportcount:0,unsupportcount:0},commentcount:0,sharenum:0}
-	]
+	];
 	
 	import commonList from '@/components/common/common-list.vue'
 	import loadMore from "@/components/common/load-more.vue"
@@ -165,7 +166,6 @@
 				uni.showToast({
 					title: msg + ' -> 成功'
 				});
-				
 			},
 			//上拉加载更多
 			loadmore(index){

@@ -10,7 +10,6 @@
 				{{item.name}} 
 				<text v-if="item.num > 0" class="ml-2 font">{{item.num}}</text>				
 			</view>
-			
 		</view>
 		
 		<swiper class="swiper" :duration="150" :current="tabIndex"

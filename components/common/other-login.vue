@@ -9,6 +9,9 @@
 </template>
 
 <script>
+	/**
+	 * @description 第三方登录 组件 {拷贝官方第三方登录修改}
+	 */
 	export default {
 		data(){
 			return{
@@ -20,9 +23,9 @@
 				service: 'oauth',
 				success: (result) => {
 					// console.log(result);
-					let pro =["weixin","qq","sinaweibo",]
+					let __provider =["weixin","qq","sinaweibo",]
 					// result.provider.map((value)
-					this.providerList = pro.map((value) => {
+					this.providerList = __provider.map((value,) => {
 						let providerName = ''
 						let icon = ''
 						let bgColor = ''
@@ -52,10 +55,7 @@
 							icon:icon,
 							bgColor:bgColor
 						}
-						
-						
 					});
-					console.log(this.providerList);
 				},
 				fail: (error) => {
 					console.log('获取登录通道失败', error);

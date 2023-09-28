@@ -42,6 +42,9 @@
 		['original'],
 		['compressed', 'original']
 	]
+	/**
+	 * @description 多图上传 {拷贝官方多图上传修改}
+	 */
 	export default {
 		props:{
 			list:Array,

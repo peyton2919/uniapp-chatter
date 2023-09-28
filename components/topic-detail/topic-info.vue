@@ -26,10 +26,15 @@
 </template>
 
 <script>
+	/**
+	 * @description 话题信息 组件
+	 * @property {Object} 话题对象
+	 */
 	export default {
 		props:{
 			obj:{
-				type:Object
+				type:Object,
+				required:true
 			}
 		}
 	}

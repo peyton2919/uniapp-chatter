@@ -23,7 +23,11 @@
 
 <script>
 	import uniBadge from "@/components/uni-ui/uni-badge/uni-badge.vue"
-	
+	/**
+	 * @description 用户列表组件
+	 * @property {Object} item 要展示对象
+	 * @property {Number} index 索引
+	 */
 	export default {
 		components:{
 			uniBadge

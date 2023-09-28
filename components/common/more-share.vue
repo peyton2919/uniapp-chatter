@@ -24,6 +24,9 @@
 <script>
 	import uniPopup from "@/components/uni-ui/uni-popup/uni-popup.vue"
 	
+	/**
+	 * @description 分享更多 组件
+	 */
 	export default {
 		components:{
 			uniPopup
@@ -70,7 +73,6 @@
 			uni.getProvider({
 				service: 'share',
 				success: (e) => {
-					console.log('success', e);
 					let data = []
 					for (let i = 0; i < e.provider.length; i++) {
 						switch (e.provider[i]) {

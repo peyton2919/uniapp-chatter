@@ -77,6 +77,16 @@
 </template>
 
 <script>
+	/**
+	 * @description 帖子列表 组件
+	 * @property {Object} item 要展示对象
+	 * @property {Number} index 索引
+	 * @property {Boolean} single 用来判断 (详情[true] | 列表[false]) 默认为: 列表[false]
+	 * @event {Function} doFollow  点击关注 事件
+	 * @event {Function} doSupport  点击顶/踩 事件 
+	 * @event {Function} doComment  点击评论 事件 
+	 * @event {Function} doShare  点击分享 事件 
+	 */
 	export default{
 		props:{
 			item:{
@@ -102,7 +112,12 @@
 		methods:{
 			// 打开个人空间
 			openSpace(){
-				console.log('打开个人空间');
+				uni.navigateTo({
+					url: '/pages/user-space/user-space',
+					success: res => {},
+					fail: () => {},
+					complete: () => {}
+				});
 			},
 			// 关注
 			doFollow(){

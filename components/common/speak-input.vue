@@ -13,6 +13,9 @@
 </template>
 
 <script>
+	/**
+	 * @description 底部发言框
+	 */
 	export default {
 		data(){
 			return{

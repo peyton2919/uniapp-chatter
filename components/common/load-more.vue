@@ -6,6 +6,10 @@
 </template>
 
 <script>
+	/**
+	 * @description 上拉加载更多 组件
+	 * @property {String} 加载状态 名称 ['上拉加载更多','加载中...','没有更多了']
+	 */
 	export default {
 		props:{
 			str:{

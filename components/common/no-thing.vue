@@ -8,6 +8,10 @@
 </template>
 
 <script>
+	/**
+	 * @description 没有数据 默认 组件
+	 * @property {String} str 提示语
+	 */
 	export default {
 		props:{
 			str:{
